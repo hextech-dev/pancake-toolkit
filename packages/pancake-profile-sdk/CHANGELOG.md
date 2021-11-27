@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.3](https://github.com/hextech-dev/pancake-toolkit/tree/master/packages/pancake-profile-sdk/compare/@hextech/profile-sdk@0.3.1...@hextech/profile-sdk@0.3.3) (2021-11-27)
+
+**Note:** Version bump only for package @hextech/profile-sdk
+
+
+
+
+
 ## 0.3.1 (2021-11-27)
 
 **Note:** Version bump only for package @hextech/profile-sdk
