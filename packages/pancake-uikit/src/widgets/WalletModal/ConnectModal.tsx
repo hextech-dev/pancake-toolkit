@@ -51,27 +51,44 @@ const getPreferredConfig = (walletConfig: Config[]) => {
 
 const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null, displayCount = 3, t }) => {
   const [showMore, setShowMore] = useState(false);
+  const [networkClicked, setNetworkClicked] = useState(false);
   const theme = useTheme();
   const sortedConfig = getPreferredConfig(config);
   const displayListConfig = showMore ? sortedConfig : sortedConfig.slice(0, displayCount);
+  const networks = ["BSC", "CHRONOS"];
+
+  const clickHandler = (network: String) => {
+    if(network === "BSC"){
+      setNetworkClicked(true)
+    }
+  }
 
   return (
     <ModalContainer minWidth="320px">
       <ModalHeader background={getThemeValue("colors.gradients.bubblegum")(theme)}>
         <ModalTitle>
-          <Heading>{t("Connect Wallet")}</Heading>
+          <Heading>{t("Switch Network")}</Heading>
         </ModalTitle>
         <ModalCloseButton onDismiss={onDismiss} />
       </ModalHeader>
       <ModalBody width={["320px", null, "340px"]}>
         <WalletWrapper py="24px" maxHeight="453px" overflowY="auto">
           <Grid gridTemplateColumns="1fr 1fr">
-            {displayListConfig.map((wallet) => (
-              <Box key={wallet.title}>
-                <WalletCard walletConfig={wallet} login={login} onDismiss={onDismiss} />
+            {networks.map((network) => (
+              <Box key={network} onClick={() => clickHandler(network)}>
+                <span>{network}</span>
               </Box>
             ))}
-            {!showMore && <MoreWalletCard t={t} onClick={() => setShowMore(true)} />}
+            {networkClicked && 
+            <>
+              {displayListConfig.map((wallet) => (
+                <Box key={wallet.title}>
+                  <WalletCard walletConfig={wallet} login={login} onDismiss={onDismiss} />
+                </Box>
+              ))}
+              {!showMore && <MoreWalletCard t={t} onClick={() => setShowMore(true)} />}
+            </>
+            }
           </Grid>
         </WalletWrapper>
         <Box p="24px">
