@@ -10,7 +10,8 @@ import { Button } from "../../components/Button";
 import { ModalBody, ModalCloseButton, ModalContainer, ModalHeader, ModalTitle } from "../Modal";
 import WalletCard, { MoreWalletCard } from "./WalletCard";
 import config, { walletLocalStorageKey } from "./config";
-import { Config, Login } from "./types";
+import { Config, ConnectorNames, Login } from "./types";
+import BinanceChain from "../../components/Svg/Icons/BinanceChain";
 
 interface Props {
   login: Login;
@@ -55,7 +56,17 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null, displayC
   const theme = useTheme();
   const sortedConfig = getPreferredConfig(config);
   const displayListConfig = showMore ? sortedConfig : sortedConfig.slice(0, displayCount);
-  const networks = ["BSC", "CHRONOS"];
+  const networks: Config[] = [{
+    title: 'BinanceSmartChain',
+    icon: BinanceChain,
+    connectorId: ConnectorNames.BSC,
+    priority: 1
+  }, {
+    title: 'Chronos',
+    icon: BinanceChain,
+    connectorId: ConnectorNames.BSC,
+    priority: 2
+  }];
 
   const clickHandler = (network: String) => {
     if(network === "BSC"){
@@ -74,12 +85,7 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null, displayC
       <ModalBody width={["320px", null, "340px"]}>
         <WalletWrapper py="24px" maxHeight="453px" overflowY="auto">
           <Grid gridTemplateColumns="1fr 1fr">
-            {networks.map((network) => (
-              <Box key={network} onClick={() => clickHandler(network)}>
-                <span>{network}</span>
-              </Box>
-            ))}
-            {networkClicked && 
+            {networkClicked ? 
             <>
               {displayListConfig.map((wallet) => (
                 <Box key={wallet.title}>
@@ -88,7 +94,13 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null, displayC
               ))}
               {!showMore && <MoreWalletCard t={t} onClick={() => setShowMore(true)} />}
             </>
-            }
+            : 
+            networks.map((network) => (
+              <Box key={network.title} onClick={() => clickHandler(network.title)}>
+                <WalletCard walletConfig={network} login={login} onDismiss={onDismiss}/>
+              </Box>
+            ))
+          }
           </Grid>
         </WalletWrapper>
         <Box p="24px">
