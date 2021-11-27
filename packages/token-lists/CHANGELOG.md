@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.22.0 (2021-11-27)
+
+
+### Features
+
+* List BCOIN and SHEESHA ([#342](https://github.com/hextech-dev/pancake-toolkit/issues/342)) ([eee80f6](https://github.com/hextech-dev/pancake-toolkit/commit/eee80f66ad726c9fdb11470b0356b179696c3a72))
+* List KART ([#331](https://github.com/hextech-dev/pancake-toolkit/issues/331)) ([baab245](https://github.com/hextech-dev/pancake-toolkit/commit/baab24558891a525ee2315703bfe56dd5e457ebe))
+* List PORTO ([#327](https://github.com/hextech-dev/pancake-toolkit/issues/327)) ([1987856](https://github.com/hextech-dev/pancake-toolkit/commit/198785628abb81e3e42ede5c05bec50d2443513a))
+* List QI ([#334](https://github.com/hextech-dev/pancake-toolkit/issues/334)) ([d00bc67](https://github.com/hextech-dev/pancake-toolkit/commit/d00bc67a644d0ae44d03ba6997b081b3cd47321b))
+
+
+
+
+
 # [2.21.0](https://github.com/pancakeswap/pancake-toolkit/compare/@pancakeswap/token-lists@2.19.1...@pancakeswap/token-lists@2.21.0) (2021-11-22)
 
 

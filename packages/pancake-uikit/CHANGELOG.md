@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.59.0 (2021-11-27)
+
+
+### Bug Fixes
+
+* **uikit:** Menu position incorrect and link no response on touch device ([#336](https://github.com/hextech-dev/pancake-toolkit/tree/master/packages/pancake-uikit/issues/336)) ([21853cd](https://github.com/hextech-dev/pancake-toolkit/tree/master/packages/pancake-uikit/commit/21853cdcdf98de66e19579501a003538b8335f78))
+* **uikit:** Mobile overlay regression ([#332](https://github.com/hextech-dev/pancake-toolkit/tree/master/packages/pancake-uikit/issues/332)) ([a8be97e](https://github.com/hextech-dev/pancake-toolkit/tree/master/packages/pancake-uikit/commit/a8be97ec6dc6d88f3fb7561ce248103d6a8ac733))
+* **uikit:** Show active border on SubMenu when hover ([#333](https://github.com/hextech-dev/pancake-toolkit/tree/master/packages/pancake-uikit/issues/333)) ([c2b4d51](https://github.com/hextech-dev/pancake-toolkit/tree/master/packages/pancake-uikit/commit/c2b4d515a4a904563d497c59953d5d9d848567a8))
+* **uikit:** UserMenu position incorrect ([#339](https://github.com/hextech-dev/pancake-toolkit/tree/master/packages/pancake-uikit/issues/339)) ([924e1ca](https://github.com/hextech-dev/pancake-toolkit/tree/master/packages/pancake-uikit/commit/924e1cad126ca919da437b45fa37a16574efe534))
+
+
+### Features
+
+* **uikit:** Add discord icon and link ([#341](https://github.com/hextech-dev/pancake-toolkit/tree/master/packages/pancake-uikit/issues/341)) ([59a9394](https://github.com/hextech-dev/pancake-toolkit/tree/master/packages/pancake-uikit/commit/59a9394f80666c83ae2b35829ebe6e8f84399e95))
+* BottomDrawer ([#340](https://github.com/hextech-dev/pancake-toolkit/tree/master/packages/pancake-uikit/issues/340)) ([7a7071e](https://github.com/hextech-dev/pancake-toolkit/tree/master/packages/pancake-uikit/commit/7a7071e633007638d424ddb16d6d429cde75f998))
+
+
+
+
+
 # [0.58.0](https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/pancake-uikit/compare/@pancakeswap/uikit@0.57.0...@pancakeswap/uikit@0.58.0) (2021-11-24)
 
 
