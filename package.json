@@ -1,20 +1,20 @@
 {
-  "name": "pancake-toolkit",
+  "name": "hextech-toolkit",
   "version": "1.0.0",
-  "description": "Pancake frontend packages",
-  "private": true,
+  "description": "Hextech frontend packages",
+  "private": false,
   "workspaces": [
     "packages/*"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pancakeswap/pancake-toolkit.git"
+    "url": "git+https://github.com/hextech-dev/pancake-toolkit.git"
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pancakeswap/pancake-toolkit/issues"
+    "url": "https://github.com/hextech-dev/pancake-toolkit/issues"
   },
-  "homepage": "https://github.com/pancakeswap/pancake-toolkit#readme",
+  "homepage": "https://github.com/hextech-dev/pancake-toolkit#readme",
   "scripts": {
     "build": "lerna run build",
     "test": "lerna run test",
