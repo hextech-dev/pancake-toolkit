@@ -2,7 +2,7 @@
   "name": "hextech-toolkit",
   "version": "1.0.0",
   "description": "Hextech frontend packages",
-  "private": false,
+  "private": true,
   "workspaces": [
     "packages/*"
   ],
