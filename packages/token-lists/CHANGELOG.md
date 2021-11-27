@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.22.3](https://github.com/hextech-dev/pancake-toolkit/compare/@hextech/token-lists@2.22.2...@hextech/token-lists@2.22.3) (2021-11-27)
+
+**Note:** Version bump only for package @hextech/token-lists
+
+
+
+
+
 ## [2.22.2](https://github.com/hextech-dev/pancake-toolkit/compare/@hextech/token-lists@2.22.0...@hextech/token-lists@2.22.2) (2021-11-27)
 
 **Note:** Version bump only for package @hextech/token-lists

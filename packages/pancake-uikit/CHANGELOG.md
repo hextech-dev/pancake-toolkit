@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.59.3](https://github.com/hextech-dev/pancake-toolkit/tree/master/packages/pancake-uikit/compare/@hextech/uikit@0.59.2...@hextech/uikit@0.59.3) (2021-11-27)
+
+**Note:** Version bump only for package @hextech/uikit
+
+
+
+
+
 ## [0.59.2](https://github.com/hextech-dev/pancake-toolkit/tree/master/packages/pancake-uikit/compare/@hextech/uikit@0.59.0...@hextech/uikit@0.59.2) (2021-11-27)
 
 **Note:** Version bump only for package @hextech/uikit
