@@ -8,10 +8,11 @@ import Text from "../../components/Text/Text";
 import Heading from "../../components/Heading/Heading";
 import { Button } from "../../components/Button";
 import { ModalBody, ModalCloseButton, ModalContainer, ModalHeader, ModalTitle } from "../Modal";
-import WalletCard, { MoreWalletCard } from "./WalletCard";
+import WalletCard, { MoreWalletCard, WalletButton } from "./WalletCard";
 import config, { walletLocalStorageKey } from "./config";
 import { Config, ConnectorNames, Login } from "./types";
 import BinanceChain from "../../components/Svg/Icons/BinanceChain";
+import Github from "../../components/Svg/Icons/Github";
 
 interface Props {
   login: Login;
@@ -56,20 +57,16 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null, displayC
   const theme = useTheme();
   const sortedConfig = getPreferredConfig(config);
   const displayListConfig = showMore ? sortedConfig : sortedConfig.slice(0, displayCount);
-  const networks: Config[] = [{
+  const networks = [{
     title: 'BinanceSmartChain',
     icon: BinanceChain,
-    connectorId: ConnectorNames.BSC,
-    priority: 1
   }, {
     title: 'Chronos',
-    icon: BinanceChain,
-    connectorId: ConnectorNames.BSC,
-    priority: 2
+    icon: Github,
   }];
 
   const clickHandler = (network: String) => {
-    if(network === "BSC"){
+    if(network === "BinanceSmartChain"){
       setNetworkClicked(true)
     }
   }
@@ -95,11 +92,15 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null, displayC
               {!showMore && <MoreWalletCard t={t} onClick={() => setShowMore(true)} />}
             </>
             : 
-            networks.map((network) => (
-              <Box key={network.title} onClick={() => clickHandler(network.title)}>
-                <WalletCard walletConfig={network} login={login} onDismiss={onDismiss}/>
+            networks.map((network) => {
+              const { title, icon: Icon } = network;
+              return <Box key={title} onClick={() => clickHandler(title)}>
+                  <WalletButton variant="tertiary">
+                    <Icon width="40px" mb="8px" />
+                    <Text fontSize="14px">{title}</Text>
+                  </WalletButton>
               </Box>
-            ))
+            })
           }
           </Grid>
         </WalletWrapper>

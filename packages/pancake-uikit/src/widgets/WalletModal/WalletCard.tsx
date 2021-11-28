@@ -13,7 +13,7 @@ interface Props {
   onDismiss: () => void;
 }
 
-const WalletButton = styled(Button).attrs({ width: "100%", variant: "text", py: "16px" })`
+export const WalletButton = styled(Button).attrs({ width: "100%", variant: "text", py: "16px" })`
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -51,7 +51,7 @@ const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss }) => {
         } else {
           login(walletConfig.connectorId);
         }
-
+        
         localStorage.setItem(walletLocalStorageKey, walletConfig.title);
         localStorage.setItem(connectorLocalStorageKey, walletConfig.connectorId);
         onDismiss();
