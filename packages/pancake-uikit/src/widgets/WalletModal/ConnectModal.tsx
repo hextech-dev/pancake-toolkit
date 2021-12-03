@@ -12,7 +12,7 @@ import WalletCard, { MoreWalletCard, WalletButton } from "./WalletCard";
 import config, { walletLocalStorageKey } from "./config";
 import { Config, ConnectorNames, Login } from "./types";
 import BinanceChain from "../../components/Svg/Icons/BinanceChain";
-import Github from "../../components/Svg/Icons/Github";
+import Cro from '../../components/Svg/Icons/Cro'
 
 interface Props {
   login: Login;
@@ -62,7 +62,7 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null, displayC
     icon: BinanceChain,
   }, {
     title: 'Chronos',
-    icon: Github,
+    icon: Cro,
   }];
 
   const clickHandler = (network: String) => {
@@ -82,7 +82,7 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null, displayC
       <ModalBody width={["320px", null, "340px"]}>
         <WalletWrapper py="24px" maxHeight="453px" overflowY="auto">
           <Grid gridTemplateColumns="1fr 1fr">
-            {networkClicked ? 
+            {networkClicked ?
             <>
               {displayListConfig.map((wallet) => (
                 <Box key={wallet.title}>
@@ -91,7 +91,7 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null, displayC
               ))}
               {!showMore && <MoreWalletCard t={t} onClick={() => setShowMore(true)} />}
             </>
-            : 
+            :
             networks.map((network) => {
               const { title, icon: Icon } = network;
               return <Box key={title} onClick={() => clickHandler(title)}>

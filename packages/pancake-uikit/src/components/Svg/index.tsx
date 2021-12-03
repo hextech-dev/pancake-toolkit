@@ -8,6 +8,7 @@ export { default as ArrowDropUpIcon } from "./Icons/ArrowDropUp";
 export { default as ArrowFirstIcon } from "./Icons/ArrowFirst";
 export { default as ArrowForwardIcon } from "./Icons/ArrowForward";
 export { default as ArrowLastIcon } from "./Icons/ArrowLast";
+export { default as Cro } from "./Icons/Cro";
 export { default as ArrowUpIcon } from "./Icons/ArrowUp";
 export { default as AutoRenewIcon } from "./Icons/AutoRenew";
 export { default as BinanceChainIcon } from "./Icons/BinanceChain";

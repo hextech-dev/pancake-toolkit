@@ -34,7 +34,9 @@ const MenuItem: React.FC<FooterProps> = ({
     <StyledFooter p={["40px 16px", null, "56px 40px 32px 40px"]} {...props} justifyContent="center">
       <Flex flexDirection="column" width={["100%", null, "1200px;"]}>
         <StyledIconMobileContainer display={["block", null, "none"]}>
+{/*
           <LogoWithTextIcon isDark width="130px" />
+*/}
         </StyledIconMobileContainer>
         <Flex
           order={[2, null, 1]}
@@ -66,7 +68,9 @@ const MenuItem: React.FC<FooterProps> = ({
             </StyledList>
           ))}
           <Box display={["none", null, "block"]}>
+{/*
             <LogoWithTextIcon isDark width="160px" />
+*/}
           </Box>
         </Flex>
         <StyledSocialLinks order={[2]} pb={["42px", null, "32px"]} mb={["0", null, "32px"]} />
@@ -87,7 +91,9 @@ const MenuItem: React.FC<FooterProps> = ({
           </Flex>
           <Flex order={[1, null, 2]} mb={["24px", null, "0"]} justifyContent="space-between" alignItems="center">
             <Box mr="20px">
+{/*
               <CakePrice cakePriceUsd={cakePriceUsd} color={darkColors.textSubtle as keyof Colors} />
+*/}
             </Box>
             <Button
               as="a"
